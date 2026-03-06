@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clínica de Psicanálise - As 5 Linguagens do Amor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Background Elements -->
+    <div class="bg-blob blob-1"></div>
+    <div class="bg-blob blob-2"></div>
+    <div id="noise"></div>
+
+    <nav class="navbar">
+      <div class="logo">Psicanálise Integrativa</div>
+      <div class="nav-links">
+        <a href="https://wa.me/" target="_blank" class="btn-outline">Agendar Sessão</a>
+      </div>
+    </nav>
+
+    <main class="container">
+      <header class="test-header">
+        <h1 class="title">As 5 Linguagens do Amor</h1>
+        <p class="subtitle">Responda pensando em como você gosta de receber amor, seja em relacionamentos amorosos, familiares ou amizades. Escolha a alternativa que mais combina com você para cada pergunta abaixo.</p>
+      </header>
+
+      <!-- All Questions go here -->
+      <div id="questions-list" class="questions-list"></div>
+
+      <!-- Submit Area -->
+      <div class="form-actions">
+        <button id="submit-btn" class="btn-primary">Descobrir Meu Resultado</button>
+        <p id="error-msg" class="error-msg" style="display: none;">Por favor, responda todas as perguntas antes de ver o resultado.</p>
+      </div>
+
+      <!-- Result Screen -->
+      <section id="result-section" class="result-card hidden">
+        <h2 class="result-title">Sua Linguagem Predominante</h2>
+        <h3 id="result-archetype" class="result-archetype">...</h3>
+        <p id="result-description" class="result-description">...</p>
+        
+        <div class="result-actions">
+          <p class="cta-text">Quer explorar como isso afeta seus padrões de relacionamento? O aprofundamento exige escuta analítica.</p>
+          <button id="schedule-btn" class="btn-primary">Agendar Sessão Online</button>
+          <button id="restart-btn" class="btn-outline">Refazer o Teste</button>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
