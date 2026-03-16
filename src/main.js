@@ -25,7 +25,30 @@ document.addEventListener('DOMContentLoaded', () => {
   const logoBtn = document.getElementById('logo-btn');
   const backHomeBtn = document.getElementById('back-home-btn');
 
+  // Mobile Menu Logic
+  const mobileMenuBtn = document.getElementById('mobile-menu');
+  const navMenu = document.getElementById('nav-menu');
+  const navLinksList = document.querySelectorAll('.nav-link');
+
+  function closeMobileMenu() {
+    if(navMenu.classList.contains('active')) {
+      navMenu.classList.remove('active');
+    }
+  }
+
+  if (mobileMenuBtn) {
+    mobileMenuBtn.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+  }
+
+  // Close menu when a link inside is clicked
+  navLinksList.forEach(link => {
+    link.addEventListener('click', closeMobileMenu);
+  });
+
   function showTest() {
+    closeMobileMenu();
     homeView.style.display = 'none';
     testView.style.display = 'block';
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -40,6 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function showHome() {
+    closeMobileMenu();
     testView.style.display = 'none';
     homeView.style.display = 'block';
     window.scrollTo({ top: 0, behavior: 'smooth' });
