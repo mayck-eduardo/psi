@@ -16,13 +16,95 @@
     <div id="noise"></div>
 
     <nav class="navbar">
-      <div class="logo">Psicanálise Integrativa</div>
+      <div class="logo cursor-pointer" id="logo-btn" style="cursor: pointer;">Psicanálise Integrativa</div>
       <div class="nav-links">
-        <a href="https://wa.me/" target="_blank" class="btn-outline">Agendar Sessão</a>
+        <a href="#contato" class="nav-link" id="nav-contact" style="text-decoration: none; color: var(--text-primary); margin-right: 1.5rem; font-weight: 500;">Contato</a>
+        <a href="https://wa.me/5511999999999" target="_blank" class="btn-outline">Agendar Sessão</a>
       </div>
     </nav>
 
-    <main class="container">
+    <!-- Home View -->
+    <div id="home-view">
+      <!-- Hero -->
+      <section class="hero-section">
+        <div class="hero-content">
+          <h1 class="hero-title">Acolhimento, Escuta e Transformação</h1>
+          <p class="hero-subtitle">Um espaço seguro para você explorar suas emoções, compreender seus padrões de relacionamento e iniciar uma jornada profunda de autoconhecimento.</p>
+          <div class="hero-actions">
+            <button id="hero-start-test-btn" class="btn-primary">Descubra sua Linguagem do Amor</button>
+            <a href="#sobre" class="btn-outline-dark" style="margin-left: 1rem; text-decoration: none; color: var(--text-primary); font-weight: 500;">Conheça o Processo</a>
+          </div>
+        </div>
+      </section>
+      
+      <!-- About -->
+      <section id="sobre" class="about-section">
+        <div class="about-grid">
+          <div class="about-visual">
+             <div class="abstract-shape"></div>
+          </div>
+          <div class="about-text">
+            <h2 class="section-title">A Clínica</h2>
+            <p>A psicanálise é um convite para mergulhar nas profundezas do seu ser. Ao dar voz ao que não foi dito, você pode liberar os sintomas e angústias que paralisam a sua vida. O processo analítico não busca corrigir, mas sim integrar, aceitar e transformar.</p>
+            <p>Nossa abordagem utiliza ferramentas como o teste das <strong>5 Linguagens do Amor</strong> para iniciar reflexões importantes sobre como nos relacionamos com o mundo e com quem amamos.</p>
+            <br>
+            <p>As sessões são conduzidas com absoluto sigilo, ética profissional e respeito à singularidade de cada história.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Team -->
+      <section id="profissionais" class="team-section">
+        <h2 class="section-title text-center">Nossos Psicanalistas</h2>
+        <div class="team-grid">
+          <!-- Analyst 1 -->
+          <div class="team-card">
+            <div class="team-photo photo-1"></div>
+            <h3 class="team-name">Nome do Psicanalista</h3>
+            <p class="team-role">Psicanalista Clínico</p>
+            <p class="team-desc">Especialize-se na sua abordagem aqui. Um breve resumo sobre sua formação, experiência e foco de atuação clínica para gerar conexão com o paciente.</p>
+          </div>
+          
+          <!-- Analyst 2 -->
+          <div class="team-card">
+            <div class="team-photo photo-2"></div>
+            <h3 class="team-name">Nome da Psicanalista</h3>
+            <p class="team-role">Psicanalista Clínica</p>
+            <p class="team-desc">Especialize-se na sua abordagem aqui. Um breve resumo sobre sua formação, experiência e foco de atuação clínica para gerar conexão com o paciente.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contato" class="contact-section">
+        <h2 class="section-title text-center">Inicie sua Formação</h2>
+        <p class="contact-desc text-center">Agende sua entrevista inicial ou tire suas dúvidas sobre o processo terapêutico.</p>
+        
+        <div class="contact-cards">
+          <div class="contact-card">
+            <h3>WhatsApp</h3>
+            <p>(11) 99999-9999</p>
+            <a href="https://wa.me/5511999999999" target="_blank" class="link-btn">Enviar Mensagem</a>
+          </div>
+          <div class="contact-card">
+            <h3>E-mail</h3>
+            <p>contato@clinica-psicanalise.com.br</p>
+            <a href="mailto:contato@clinica.com.br" class="link-btn">Enviar E-mail</a>
+          </div>
+          <div class="contact-card">
+            <h3>Atendimento</h3>
+            <p>Online: Brasil e Exterior<br>Presencial: São Paulo, SP</p>
+          </div>
+        </div>
+      </section>
+      
+      <footer class="footer">
+        <p>&copy; 2026 Psicanálise Integrativa. Todos os direitos reservados.</p>
+      </footer>
+    </div>
+
+    <!-- Test View -->
+    <main id="test-view" class="container" style="display: none; padding-top: 140px;">
       <header class="test-header">
         <h1 class="title">As 5 Linguagens do Amor</h1>
         <p class="subtitle">Responda pensando em como você gosta de receber amor, seja em relacionamentos amorosos, familiares ou amizades. Escolha a alternativa que mais combina com você para cada pergunta abaixo.</p>
@@ -47,6 +129,7 @@
           <p class="cta-text">Quer explorar como isso afeta seus padrões de relacionamento? O aprofundamento exige escuta analítica.</p>
           <button id="schedule-btn" class="btn-primary">Agendar Sessão Online</button>
           <button id="restart-btn" class="btn-outline">Refazer o Teste</button>
+          <button id="back-home-btn" class="btn-outline" style="margin-top: 10px;">Voltar para Home</button>
         </div>
       </section>
     </main>

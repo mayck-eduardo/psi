@@ -301,10 +301,206 @@ body {
   cursor: pointer;
 }
 
+/* HOME VIEW STYLES */
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 0 5%;
+  position: relative;
+  text-align: center;
+  padding-top: 80px;
+}
+
+.hero-content {
+  max-width: 800px;
+  z-index: 10;
+}
+
+.hero-title {
+  font-family: var(--font-heading);
+  font-size: 4.5rem;
+  font-weight: 500;
+  line-height: 1.1;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  font-weight: 300;
+  margin-bottom: 2.5rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-outline-dark {
+  border: 1px solid var(--text-primary);
+  padding: 1.2rem 2.5rem;
+  border-radius: 40px;
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
+  display: inline-block;
+}
+
+.btn-outline-dark:hover {
+  background: var(--text-primary);
+  color: var(--bg-color);
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Section Commons */
+.section-title {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  color: var(--text-primary);
+  margin-bottom: 2rem;
+  font-weight: 400;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* About Section */
+.about-section {
+  padding: 8rem 10%;
+  background-color: #fff;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-visual {
+  position: relative;
+  aspect-ratio: 4/5;
+  background-image: url('https://images.unsplash.com/photo-1549497538-303791108f95?q=80&w=1061&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px 20px 20px 100px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+}
+
+.about-visual::after {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: 20px;
+  bottom: 20px;
+  border: 2px solid var(--accent-color);
+  border-radius: 20px 20px 20px 100px;
+  z-index: -1;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 8rem 10%;
+  background-color: var(--bg-color);
+}
+
+.contact-desc {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  margin-bottom: 4rem;
+}
+
+.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-card {
+  background: var(--card-bg);
+  padding: 3rem 2rem;
+  border-radius: 20px;
+  text-align: center;
+  border: 1px solid var(--border-color);
+  transition: transform 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+}
+
+.contact-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.contact-card p {
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+  min-height: 48px;
+}
+
+.link-btn {
+  display: inline-block;
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px solid var(--accent-color);
+  padding-bottom: 2px;
+  transition: opacity 0.3s ease;
+}
+
+.link-btn:hover {
+  opacity: 0.7;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: #fff;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 768px) {
+  .hero-title { font-size: 3rem; }
+  .hero-actions { flex-direction: column; width: 100%; }
+  .btn-primary, .btn-outline-dark { width: 100%; text-align: center; margin: 0 !important; }
   .title { font-size: 2.5rem; }
   .question-block { padding: 1.5rem; }
   .question-title { font-size: 1.5rem; }
   .result-archetype { font-size: 2.5rem; }
   .result-card { padding: 2.5rem 1.5rem; }
+  .contact-cards { grid-template-columns: 1fr; }
 }

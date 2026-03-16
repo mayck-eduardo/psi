@@ -14,6 +14,42 @@ document.addEventListener('DOMContentLoaded', () => {
   const restartBtn = document.getElementById('restart-btn');
   const scheduleBtn = document.getElementById('schedule-btn');
 
+  // View containers
+  const homeView = document.getElementById('home-view');
+  const testView = document.getElementById('test-view');
+  
+  // Navigation triggers
+  const heroStartBtn = document.getElementById('hero-start-test-btn');
+  const logoBtn = document.getElementById('logo-btn');
+  const backHomeBtn = document.getElementById('back-home-btn');
+
+  function showTest() {
+    homeView.style.display = 'none';
+    testView.style.display = 'block';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    
+    // Animate in if it wasn't done yet, or just fade in
+    gsap.from('#test-view', {
+      opacity: 0,
+      y: 20,
+      duration: 0.8,
+      ease: 'power3.out'
+    });
+  }
+
+  function showHome() {
+    testView.style.display = 'none';
+    homeView.style.display = 'block';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  if (heroStartBtn) heroStartBtn.addEventListener('click', showTest);
+  if (logoBtn) logoBtn.addEventListener('click', showHome);
+  if (backHomeBtn) backHomeBtn.addEventListener('click', () => {
+    restartBtn.click(); // Reset test
+    showHome();
+  });
+
   const answers = {}; // Store answers { questionIndex: 'A' }
 
   // 1. Render all questions
